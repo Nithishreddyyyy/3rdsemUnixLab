@@ -39,6 +39,6 @@ int main(int argc, char *argv[]){
         default:
             puts("Unknown file");
     }
-    printf("The inode number is: %ld\n",st.st_ino);
+    printf("The inode number is: %ld\n",st.st_ino); //better to use llu instead of ld
     return 0;
 }
