@@ -4,7 +4,7 @@
 int main(){
     pid_t pid;
     printf("Main\n");
-    if((pid = fork() == -1)){
+    if((pid = fork()) == -1){
         printf("Fork Error");
         return -1;
     }
