@@ -12,7 +12,7 @@ flag=1
 i=0
 while test $i -lt $size
 do
-	if test "${arr[i]}" = "$key"
+	if test ${arr[i]} = $key
 	then
 		flag=0
 		break
