@@ -1,4 +1,4 @@
-echo Two file names are $1 & $2
+echo Two file names are $1 and $2
 s1=`ls -l $1 | cut -c 2-10`
 s2=`ls -l $2 | cut -c 2-10`
 
