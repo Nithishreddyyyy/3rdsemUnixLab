@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 int status;
-int system(const char *cmd){
+int my_system(const char *cmd){
     pid_t pid;
     if(cmd == NULL)
         return 1;
@@ -28,11 +28,11 @@ int system(const char *cmd){
 }
 
 int main(void){
-    if((status = system("date; exit 0"))< 0)
+    if((status = my_system("date; exit 0"))< 0)
         perror("System error");
-    if((status = system ("daaaate"))<0)
+    if((status = my_system ("daaaate"))<0)
         perror("System error");
-    if ((status = system ("Who; exit 44")) < 0)
+    if ((status = my_system ("Who; exit 44")) < 0)
         perror("System error");
     exit (0);
 }
