@@ -39,12 +39,12 @@ int main(){
         return 0;
     }
 
-    if (pid > 0) //parent{
+    if (pid > 0) {//parent
         close(pfds[0]);
         write(pfds[1], "hello\n", 7);
     }
 
-    if (pid == 0) //child{
+    if (pid == 0) {//child
         close(pfds[1]);
         n = read(pfds[0], buf, 7);
         write(1, buf, n);
