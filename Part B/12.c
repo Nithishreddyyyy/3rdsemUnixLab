@@ -40,9 +40,9 @@ int main(){
     }
 
     if (pid == 0) {//child
-            close(pfds[1]);
-            n = read(pfds[0], buf, 7);
-            write(1, buf, n);
+        close(pfds[1]);
+        n = read(pfds[0], buf, 7);
+        write(1, buf, n);
     }
 
     if (pid > 0) {//parent
